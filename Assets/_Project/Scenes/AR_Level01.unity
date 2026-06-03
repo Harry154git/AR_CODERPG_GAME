@@ -133,7 +133,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3885869
 Transform:
@@ -215,6 +215,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Modular (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -288,6 +292,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
       propertyPath: m_Name
       value: Floor_Modular (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -387,7 +395,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &140635203
 Transform:
@@ -469,6 +477,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Modular (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -493,10 +505,10 @@ GameObject:
   - component: {fileID: 168501386}
   m_Layer: 0
   m_Name: Tile_1_2
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &168501385
 Transform:
@@ -637,7 +649,7 @@ GameObject:
   - component: {fileID: 188152787}
   m_Layer: 0
   m_Name: GoalModel
-  m_TagString: Untagged
+  m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -675,7 +687,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -801,6 +813,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
       propertyPath: m_Name
       value: Floor_Modular
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -963,10 +979,10 @@ GameObject:
   - component: {fileID: 210228315}
   m_Layer: 0
   m_Name: Tile_2_0
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &210228314
 Transform:
@@ -1126,6 +1142,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Modular
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1218,7 +1238,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 247785082}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 624783324}
+        m_TargetAssemblyTypeName: CommandManager, Assembly-CSharp
+        m_MethodName: AddTurnLeft
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &247785082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1271,10 +1303,10 @@ GameObject:
   - component: {fileID: 283376037}
   m_Layer: 0
   m_Name: Tile_0_2
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &283376036
 Transform:
@@ -1384,7 +1416,7 @@ GameObject:
   - component: {fileID: 301311313}
   m_Layer: 0
   m_Name: Wall_4_1
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1433,7 +1465,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 301311311}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1543,6 +1575,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fdcaa167b52b35b449f448f9de8f662e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fdcaa167b52b35b449f448f9de8f662e, type: 3}
       propertyPath: m_Name
       value: Crate
@@ -1571,7 +1607,7 @@ GameObject:
   - component: {fileID: 304303244}
   m_Layer: 0
   m_Name: Wall_1_1
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1620,7 +1656,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304303242}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1734,6 +1770,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Modular (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1808,6 +1848,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Modular
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1873,7 +1917,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 00c60fe4ee3d17d4298ca6f2ac5bbcb5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 909755416}
   m_SourcePrefab: {fileID: 100100000, guid: 00c60fe4ee3d17d4298ca6f2ac5bbcb5, type: 3}
 --- !u!4 &341143805 stripped
 Transform:
@@ -1976,6 +2023,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Modular
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2000,7 +2051,7 @@ GameObject:
   - component: {fileID: 372257832}
   m_Layer: 0
   m_Name: Wall_3_2
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2049,7 +2100,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 372257830}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -2180,10 +2231,10 @@ GameObject:
   - component: {fileID: 390194655}
   m_Layer: 0
   m_Name: Tile_2_2
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &390194654
 Transform:
@@ -2293,10 +2344,10 @@ GameObject:
   - component: {fileID: 407813470}
   m_Layer: 0
   m_Name: Tile_2_3
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &407813469
 Transform:
@@ -2543,10 +2594,10 @@ GameObject:
   - component: {fileID: 435883889}
   m_Layer: 0
   m_Name: Tile_3_4
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &435883888
 Transform:
@@ -2656,10 +2707,10 @@ GameObject:
   - component: {fileID: 437523865}
   m_Layer: 0
   m_Name: Tile_0_1
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &437523864
 Transform:
@@ -2837,7 +2888,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 445269277}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 624783324}
+        m_TargetAssemblyTypeName: CommandManager, Assembly-CSharp
+        m_MethodName: AddAttack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &445269277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2890,10 +2953,10 @@ GameObject:
   - component: {fileID: 465517782}
   m_Layer: 0
   m_Name: Tile_0_4
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &465517781
 Transform:
@@ -3003,10 +3066,10 @@ GameObject:
   - component: {fileID: 484163578}
   m_Layer: 0
   m_Name: Tile_3_0
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &484163577
 Transform:
@@ -3116,10 +3179,10 @@ GameObject:
   - component: {fileID: 546090552}
   m_Layer: 0
   m_Name: Tile_4_2
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &546090551
 Transform:
@@ -3279,6 +3342,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Modular (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3303,7 +3370,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &574852962
 Transform:
@@ -3570,10 +3637,10 @@ GameObject:
   - component: {fileID: 613184682}
   m_Layer: 0
   m_Name: Tile_3_2
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &613184681
 Transform:
@@ -3678,6 +3745,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 624783323}
+  - component: {fileID: 624783324}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3700,6 +3768,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &624783324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624783322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49746ca0efabbae4e9e8e8865f6febb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CommandManager
+  commandList: 
+  commandDisplay: {fileID: 200414516}
+  player: {fileID: 1513870732}
 --- !u!1001 &627878963
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3763,6 +3846,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
       propertyPath: m_Name
       value: Floor_Modular (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3923,9 +4010,10 @@ GameObject:
   - component: {fileID: 637999100}
   - component: {fileID: 637999099}
   - component: {fileID: 637999098}
+  - component: {fileID: 637999101}
   m_Layer: 0
   m_Name: EnemyModel
-  m_TagString: Untagged
+  m_TagString: EnemyLevel1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3976,7 +4064,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 637999096}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -4026,6 +4114,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 637999096}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &637999101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637999096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d9e9ce2f86dcf94fbe9cd7b20490f13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  animator: {fileID: 1800316418}
+  deathDelay: 1
+  playerTarget: {fileID: 1513870728}
+  gridSize: 1
+  rotationSpeed: 300
 --- !u!1001 &641556865
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4164,6 +4269,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Modular
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4188,10 +4297,10 @@ GameObject:
   - component: {fileID: 673471277}
   m_Layer: 0
   m_Name: Tile_1_0
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &673471276
 Transform:
@@ -4301,10 +4410,10 @@ GameObject:
   - component: {fileID: 675537066}
   m_Layer: 0
   m_Name: Tile_4_3
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &675537065
 Transform:
@@ -4464,6 +4573,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Modular (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4488,7 +4601,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &714909132
 Transform:
@@ -4521,7 +4634,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &757867966
 Transform:
@@ -4603,6 +4716,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Modular (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4677,6 +4794,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Modular (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4701,10 +4822,10 @@ GameObject:
   - component: {fileID: 772471976}
   m_Layer: 0
   m_Name: Tile_4_0
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &772471975
 Transform:
@@ -4864,6 +4985,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Modular
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4956,7 +5081,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 838591222}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 624783324}
+        m_TargetAssemblyTypeName: CommandManager, Assembly-CSharp
+        m_MethodName: RunGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &838591222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5059,6 +5196,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Modular (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5083,7 +5224,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &886870444
 Transform:
@@ -5101,6 +5242,33 @@ Transform:
   - {fileID: 958950994}
   m_Father: {fileID: 1846431441}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &909755415 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 00c60fe4ee3d17d4298ca6f2ac5bbcb5, type: 3}
+  m_PrefabInstance: {fileID: 341143804}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &909755416
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909755415}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f333196356bde94d84a1ea3a601477a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &915088371
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5165,6 +5333,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Modular (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5189,10 +5361,10 @@ GameObject:
   - component: {fileID: 941365390}
   m_Layer: 0
   m_Name: Tile_1_1
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &941365389
 Transform:
@@ -5352,6 +5524,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Modular
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5470,10 +5646,10 @@ GameObject:
   - component: {fileID: 986210305}
   m_Layer: 0
   m_Name: Tile_4_1
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &986210304
 Transform:
@@ -5583,7 +5759,7 @@ GameObject:
   - component: {fileID: 1001123557}
   m_Layer: 0
   m_Name: Wall_2_4
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5632,7 +5808,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1001123555}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -5696,10 +5872,10 @@ GameObject:
   - component: {fileID: 1061515876}
   m_Layer: 0
   m_Name: Tile_4_4
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1061515875
 Transform:
@@ -6055,6 +6231,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Modular (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6202,6 +6382,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177475389}
   m_CullTransparentMesh: 1
+--- !u!1 &1190427595 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6eb2e6b3925934e468b0ea04f411b80f, type: 3}
+  m_PrefabInstance: {fileID: 1800316416}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1190781989
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6266,6 +6451,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Modular (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6323,10 +6512,10 @@ GameObject:
   - component: {fileID: 1222856781}
   m_Layer: 0
   m_Name: Tile_0_3
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1222856780
 Transform:
@@ -6486,6 +6675,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Modular (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6593,6 +6786,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Modular (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6667,6 +6864,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Modular (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6737,6 +6938,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fdcaa167b52b35b449f448f9de8f662e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fdcaa167b52b35b449f448f9de8f662e, type: 3}
       propertyPath: m_Name
       value: Crate
@@ -6765,7 +6970,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1389995082
 Transform:
@@ -7107,10 +7312,10 @@ GameObject:
   - component: {fileID: 1445244084}
   m_Layer: 0
   m_Name: Tile_2_1
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1445244083
 Transform:
@@ -7270,6 +7475,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Modular
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7294,7 +7503,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1482719021
 Transform:
@@ -7324,6 +7533,8 @@ GameObject:
   - component: {fileID: 1513870731}
   - component: {fileID: 1513870730}
   - component: {fileID: 1513870729}
+  - component: {fileID: 1513870732}
+  - component: {fileID: 1513870733}
   m_Layer: 0
   m_Name: PlayerModel
   m_TagString: Untagged
@@ -7377,7 +7588,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1513870727}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -7427,6 +7638,50 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1513870727}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1513870732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513870727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b9be9aa88f2f864aa132e7450bca37d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  animator: {fileID: 909755416}
+  isGameOver: 0
+  moveSpeed: 5
+  rotationSpeed: 300
+  gridSize: 1
+--- !u!54 &1513870733
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513870727}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1528720416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7515,10 +7770,10 @@ GameObject:
   - component: {fileID: 1547956090}
   m_Layer: 0
   m_Name: Tile_3_3
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1547956089
 Transform:
@@ -7628,10 +7883,10 @@ GameObject:
   - component: {fileID: 1570390869}
   m_Layer: 0
   m_Name: Tile_3_1
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1570390868
 Transform:
@@ -7741,10 +7996,10 @@ GameObject:
   - component: {fileID: 1604369206}
   m_Layer: 0
   m_Name: Tile_2_4
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1604369205
 Transform:
@@ -7854,10 +8109,10 @@ GameObject:
   - component: {fileID: 1632513226}
   m_Layer: 0
   m_Name: Tile_1_4
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1632513225
 Transform:
@@ -7967,7 +8222,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1677943103
 Transform:
@@ -8009,14 +8264,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1726956280}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 2, y: 0, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 637999097}
   m_Father: {fileID: 1764041130}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1001 &1728152936
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8080,6 +8335,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
       propertyPath: m_Name
       value: Floor_Modular (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8155,6 +8414,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Modular (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8228,6 +8491,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
       propertyPath: m_Name
       value: Floor_Modular (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8418,13 +8685,38 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6eb2e6b3925934e468b0ea04f411b80f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1800316418}
   m_SourcePrefab: {fileID: 100100000, guid: 6eb2e6b3925934e468b0ea04f411b80f, type: 3}
 --- !u!4 &1800316417 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6eb2e6b3925934e468b0ea04f411b80f, type: 3}
   m_PrefabInstance: {fileID: 1800316416}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1800316418
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190427595}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4578c81da1b17874b81afc4f1f539f53, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1804295198
 GameObject:
   m_ObjectHideFlags: 0
@@ -8576,7 +8868,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1846431441
 Transform:
@@ -8666,6 +8958,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Modular
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8739,6 +9035,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
       propertyPath: m_Name
       value: Floor_Modular (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8814,6 +9114,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Modular (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8838,7 +9142,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1911183177
 Transform:
@@ -8938,7 +9242,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1955721542}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 624783324}
+        m_TargetAssemblyTypeName: CommandManager, Assembly-CSharp
+        m_MethodName: AddMoveForward
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1955721542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9128,7 +9444,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1995351596
 Transform:
@@ -9228,7 +9544,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2004095076}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 624783324}
+        m_TargetAssemblyTypeName: CommandManager, Assembly-CSharp
+        m_MethodName: AddTurnRight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2004095076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9281,10 +9609,10 @@ GameObject:
   - component: {fileID: 2024784799}
   m_Layer: 0
   m_Name: Tile_0_0
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2024784798
 Transform:
@@ -9394,10 +9722,10 @@ GameObject:
   - component: {fileID: 2042184243}
   m_Layer: 0
   m_Name: Tile_1_3
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2042184242
 Transform:
@@ -9557,6 +9885,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Modular (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9630,6 +9962,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
       propertyPath: m_Name
       value: Floor_Modular (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9705,6 +10041,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Modular
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9778,6 +10118,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
       propertyPath: m_Name
       value: Floor_Modular
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b1dd1b66b0279e43a486c08d578300f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
