@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig>
   <Tracking>
+    <ImageTarget name="markerlevel2" size="100.000000 77.213539" />
+    <ImageTarget name="markerlevel1" size="100.000000 100.000000" />
     <ImageTarget name="marker" size="100.000000 66.666664" />
   </Tracking>
 </QCARConfig>
