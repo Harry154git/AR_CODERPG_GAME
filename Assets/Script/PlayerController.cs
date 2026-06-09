@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     public bool isGameOver = false;
     public float moveSpeed = 5f;
     public float rotationSpeed = 300f;
-    public float gridSize = 1f; // Sesuaikan dengan jarak antar petak di Unity
+    public float gridSize = 1f;
 
     private bool isMoving = false;
 
@@ -53,8 +53,8 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(0.4f);
         
         RaycastHit hit;
-        // Menembakkan raycast dari sedikit di atas lantai agar kena badan musuh
-        Vector3 rayStart = transform.position + Vector3.up * 0.2f; 
+        // Laser ditaruh di dada (Otomatis menyesuaikan skala raksasa/kecil)
+        Vector3 rayStart = transform.position + Vector3.up * (transform.lossyScale.y * 0.5f); 
         
         if (Physics.Raycast(rayStart, transform.forward, out hit, gridSize))
         {
@@ -73,7 +73,8 @@ public class PlayerController : MonoBehaviour
     {
         // --- 1. Cek Tembok / Rintangan di Depan ---
         RaycastHit hitForward;
-        Vector3 rayStartForward = transform.position + Vector3.up * 0.2f;
+        // Mata Depan dinaikkan setinggi dada agar tidak menggaruk ubin
+        Vector3 rayStartForward = transform.position + Vector3.up * (transform.lossyScale.y * 0.5f);
         
         if (Physics.Raycast(rayStartForward, transform.forward, out hitForward, gridSize))
         {
@@ -85,13 +86,13 @@ public class PlayerController : MonoBehaviour
 
         // --- 2. Cek Lantai (Upper Floor) di Petak Tujuan ---
         Vector3 targetPos = transform.position + transform.forward * gridSize;
-        Vector3 rayStartDown = targetPos + Vector3.up * 0.5f; // Posisi sensor di atas target petak
+        // Sensor bawah ditembakkan dari atas kepala jauh ke bawah agar pasti kena lantai
+        Vector3 rayStartDown = targetPos + Vector3.up * (transform.lossyScale.y * 2f); 
         RaycastHit hitDown;
 
-        // Menembakkan sinar ke bawah (Vector3.down) sejauh 1 unit
-        if (Physics.Raycast(rayStartDown, Vector3.down, out hitDown, 1f))
+        // Tembak laser sejauh 5x tinggi badan
+        if (Physics.Raycast(rayStartDown, Vector3.down, out hitDown, transform.lossyScale.y * 5f))
         {
-            // Jika yang terdeteksi di bawah BUKAN Upper Floor, maka block!
             if (!hitDown.collider.CompareTag("Floor") && !hitDown.collider.CompareTag("Goal"))
             {
                 return true; 
@@ -99,11 +100,10 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            // Jika tidak menabrak apa pun di bawahnya (berarti jurang kosong)
-            return true;
+            return true; // Jurang kosong
         }
 
-        return false; // Depan kosong, dan bawahnya ada lantai aman
+        return false;
     }
 
     private IEnumerator MoveToPosition(Vector3 targetPos)
@@ -115,9 +115,13 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("IsWalking", true);
         }
 
+        // Menyesuaikan speed agar Playernya tidak jalan super lambat saat ukurannya raksasa
+        float currentSpeed = moveSpeed;
+        if (gridSize > 1) currentSpeed = moveSpeed * (gridSize / 2f);
+
         while (Vector3.Distance(transform.position, targetPos) > 0.01f)
         {
-            transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, targetPos, currentSpeed * Time.deltaTime);
             yield return null;
         }
         transform.position = targetPos;
@@ -144,22 +148,15 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Cek apakah benda yang disentuh punya Tag "Goal"
         if (other.CompareTag("Goal"))
         {
             Debug.Log("LEVEL SELESAI! PEMAIN MENANG! 🎉");
-            
-            // 1. Ubah status game agar perintah lain dihentikan
             isGameOver = true;
             
-            // 2. Putar animasi JOGET!
             if (animator != null)
             {
-                // Memanggil trigger "Win" yang kita buat di Unity
                 animator.SetTrigger("Win"); 
             }
-
-            // Nanti di sini kita bisa memunculkan UI Panel "Victory" atau pindah level
         }
     }
 }
